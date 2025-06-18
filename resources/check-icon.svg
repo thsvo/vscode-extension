@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+  <!-- Background circle -->
+  <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.6"/>
+  
+  <!-- Main design -->
+  <path d="M5 8 L7 10 L11 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Decorative dots -->
+  <circle cx="8" cy="4" r="0.8" fill="currentColor" opacity="0.7"/>
+  <circle cx="4" cy="8" r="0.6" fill="currentColor" opacity="0.5"/>
+  <circle cx="12" cy="8" r="0.6" fill="currentColor" opacity="0.5"/>
+  <circle cx="8" cy="12" r="0.8" fill="currentColor" opacity="0.7"/>
+</svg>

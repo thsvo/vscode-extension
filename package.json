@@ -1,0 +1,113 @@
+{
+  "name": "simpletheme",
+  "displayName": "Simple Theme",
+  "description": "A VS Code extension with custom UI enhancements",
+  "version": "0.0.1",
+  "publisher": "tariqul",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "simpletheme.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "simpletheme.openView",
+        "title": "Open Simple Theme View",
+        "icon": "$(add)"
+      },
+      {
+        "command": "simpletheme.showInfo",
+        "title": "Show Extension Info"
+      },
+      {
+        "command": "simpletheme.toggleStatus",
+        "title": "Toggle Status Bar Icon"
+      },
+      {
+        "command": "simpletheme.panelItemClicked",
+        "title": "Panel Item Clicked"
+      },
+      {
+        "command": "simpletheme.editorToolbarAction",
+        "title": "Editor Action by Tariqul",
+        "icon": "$(play)"
+      },
+      {
+        "command": "simpletheme.customTabAction",
+        "title": "Custom Tab Action",
+        "icon": "$(file-add)"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "simpletheme-explorer",
+          "title": "Simple Theme",
+          "icon": "./resources/facebook-svgrepo-com.svg"
+        }
+      ]
+    },
+    "views": {
+      "simpletheme-explorer": [
+        {
+          "id": "simpletheme.view",
+          "name": "My Custom View",
+          "when": "true"
+        },
+        {
+          "id": "simpletheme.panelView",
+          "name": "Added by Tariqul",
+          "when": "true"
+        }
+      ]
+    },
+    "menus": {
+      "editor/title": [
+        {
+          "command": "simpletheme.editorToolbarAction",
+          "when": "editorTextFocus",
+          "group": "navigation@1"
+        },
+        {
+          "command": "simpletheme.customTabAction",
+          "when": "editorTextFocus",
+          "group": "navigation@2"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "simpletheme.customTabAction",
+          "when": "resourceExtname",
+          "group": "1_modification"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.101.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
